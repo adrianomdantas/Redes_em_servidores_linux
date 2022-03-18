@@ -16,4 +16,4 @@ Aplicações de um servidor Linux em uma rede
  1. **Configuração e administração de redes**
  
 ### _...Projeto em contrução..._
-[](Itens/Imagens/Construcao.gif)
+![](Itens/Imagens/Construcao.gif)
