@@ -1,5 +1,5 @@
-<center>[Voltar ao README](/README.md/)
+[Voltar ao README](/README.md/)
 
-## <center>_....Em construção...._
+## _....Em construção...._
 
-<center>![](Imagens/Construcao.gif "Trabalhando duro nisso")
+![](Imagens/Construcao.gif "Trabalhando duro nisso")
