@@ -7,7 +7,7 @@ Aplicações de Rede em servidores Linux, Debian e Ubuntu
 1. **Introdução**  
    - [Debian GNU/Linux](Itens/EmConstrução.md)
    - [Ubuntu Server](Itens/EmConstrução.md)
-   - [Revisão de Comandos Basicos](Itens/EmConstrução.md)
+   - Revisão de Comandos Basicos
       - [Estrutura de diretórios no Linux](Itens/EmConstrução.md)
       - [Navegação na árvire de diretórios](Itens/EmConstrução.md)
       - [Manipulação de arquivos e diretórios](Itens/EmConstrução.md)
