@@ -2,10 +2,10 @@
 
 Aplicações de um servidor Linux em uma rede
 
-![](Imagens/nuvensdeservidoreslinux.jpg)
+![](Itens/Imagens/nuvensdeservidoreslinux.jpg)
 
 1. **Introdução**  
-   - [Debian GNU/Linux]()
+   - [Debian GNU/Linux](Itens/Debian_GNU_Linux.md)
    - [Ubuntu Server]()
    - [Revisão de Comandos Basicos]()
       - [Estrutura de diretórios no Linux]()
@@ -15,3 +15,5 @@ Aplicações de um servidor Linux em uma rede
       - [Comandos Encadeados e redirocionamento de fluxo]()	 
  1. **Configuração e administração de redes**
  
+### _...Projeto em contrução..._
+[](Itens/Imagens/Construcao.gif)
