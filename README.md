@@ -2,8 +2,6 @@
 
 Aplicações de um servidor Linux em uma rede
 
-![](Imagens/Nuvens_linux_Pai.jpg)
-![](Imagens/nuvem_linux_meu_filho.jpeg)
 ![](Imagens/nuvensdeservidoreslinux.jpg)
 
 1. **Introdução**  
