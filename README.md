@@ -1,6 +1,6 @@
 # Serviços de Redes em Servidores Linux
 
-Aplicações de um servidor Linux em uma rede
+Aplicações de Rede em servidores Linux, Debian e Ubuntu
 
 ![](Itens/Imagens/nuvensdeservidoreslinux.jpg)
 
