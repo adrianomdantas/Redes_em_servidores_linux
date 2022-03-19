@@ -7,5 +7,6 @@ A primeira coisa a saber é que o Linux não é um sistema operacional e sim um 
 
 # Debian GNU/Linux
 
-<img src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" width: 20px>
+<a href="https://ubuntu.com/"><img src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png"></a>
+
 
