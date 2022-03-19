@@ -12,7 +12,7 @@ A primeira coisa a saber é que o Linux não é um sistema operacional e sim um 
 
 <a href="https://ubuntu.com/" target="_blank"><img src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" ></a>
 
-<a href="https://ubuntu.com/" target="_blank"><img src="https://assets.ubuntu.com/v1/d41eabfc-ubuntu-logo51.png" ></a>
+<a href="https://ubuntu.com/" target="_blank"><img src="https://assets.ubuntu.com/v1/ad9a02ac-ubuntu-orange.gif" ></a>
 
 
 
