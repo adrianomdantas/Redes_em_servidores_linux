@@ -1,4 +1,5 @@
-<center>[Voltar ao README](/README.md/)</center>
+
+<div style="text-align:center">[Voltar ao README](/README.md/).</p></div>
 
 ## _....Em construção...._
 
