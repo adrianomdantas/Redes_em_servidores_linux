@@ -14,8 +14,7 @@ Um dos motivos do Debian ser uma das principais distribuições linux é seu ger
 
 
 # Ubunto Server
-
-<a href="https://ubuntu.com/" target="_blank"><img src="https://assets.ubuntu.com/v1/ad9a02ac-ubuntu-orange.gif" ></a>
+[![](https://assets.ubuntu.com/v1/ad9a02ac-ubuntu-orange.gif "Pagina Ubuntu")](https://ubuntu.com/)
 
 O Ubunto hoje em dia é a distribuição mais usada em desktops, tem uma etratégia agressiva de lançar uma atualização a cada 6 meses, isso acaba deixando um pouco instável, porém, para contirnar este problema, a cada 2 anos é lançada uma versão TLS com suporte de longa duração(5anos), tem suporte da Canonical, uma empresa com fins lucrativos.  
 Devido ao supprte a serviços de infraestrutura como (IaaS), E comum que empresas queiram contratos que garantam o funcionamento ininterrupto do sistema, e neste quesito, o Debin não consegue prover.
