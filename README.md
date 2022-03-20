@@ -4,16 +4,16 @@ Aplicações de Rede em servidores Linux, Debian e Ubuntu
 
 ![](Itens/Imagens/nuvensdeservidoreslinux.jpg)
 
-1. **Introdução**  
-   - [Debian GNU/Linux](Itens/EmConstrução.md)
-   - [Ubuntu Server](Itens/EmConstrução.md)
+1. [**Introdução**](Itens/EmConstrução.md)  
+   - Debian GNU/Linux
+   - Ubuntu Server
    - Revisão de Comandos Basicos
-      - [Estrutura de diretórios no Linux](Itens/EmConstrução.md)
-      - [Navegação na árvire de diretórios](Itens/EmConstrução.md)
-      - [Manipulação de arquivos e diretórios](Itens/EmConstrução.md)
-      - [Permissões em arquivos e diretórios](Itens/EmConstrução.md)
-      - [Comandos Encadeados e redirocionamento de fluxo](Itens/EmConstrução.md)	 
- 1. **Configuração e administração de redes**
+      - Estrutura de diretórios no Linux]
+      - Navegação na árvire de diretórios
+      - Manipulação de arquivos e diretórios
+      - Permissões em arquivos e diretórios
+      - Comandos Encadeados e redirocionamento de fluxo 
+ 1. [**Configuração e administração de redes**](Itens/EmConstrução.md)
  
 ### _...Projeto em contrução..._
 ![](Itens/Imagens/Construcao.gif)
