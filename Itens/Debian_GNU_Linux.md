@@ -49,5 +49,33 @@ sysadmin@Linux:~$ ./script.sh
 # Estrutura de diretórios do Linux
 
 Assim como no Unix, no linux, os discos e partições ficam ocultas tendo o usuário apenas acesso a visão logica  da árvore de diretório do Linux.  
-Apenas administradores tem uma série de ferramentas para visualizar os discos como por exemplo o comando **fdisk** ou a tabela de partições que fica rm **/etc/fstab**
+Apenas administradores tem uma série de ferramentas para visualizar os discos como por exemplo o comando **fdisk** ou a tabela de partições que fica rm **/etc/fstab**  
+**FHS** é um padrão seguido pela comunidade Linux que orienta como os diretórios basicos devem ser nomeados e organizados, não para engessar o desenvolvedor e sim para facilitar a localização de arquivos na estrutura  
+A arvore do Linux tem um ponto principal que é representado pelo "/", ou seja, é pasta principal do sistema, todos os outros diretórios são subdiretõrios    
+
+![Arvore de diretório linux](Imagens/Linuxtree.png)  
+
+Uma boa pratica, é deixar pelomenos as partições /home (pasta doos usuarios e /var (arquivos de log do sistema) fiquem em uma partição a parte para evitar que quando cheios, não comprometer o funcionamento do sistema.  
+A tabela a baixo, mostra os diretórios que devem existir a partir da raiz do linux.  
+
+|Diretórios| Descrição|Observaçãso|
+|---|---|---|
+|/bin|Binários essenciais de programas/comandos||
+|/boot|Arquivos estáticos de carregador de boot||
+|/dev|Arquivos que representam dispositivos fisicos||
+|/etc|Arquivos de configuração do sistema||
+|/home|Pasta dos usuários|Opcional|
+|/lib|Modulos do kernel e bibliotecas compartilhadas||
+|/media|Ponto de montagem de mídia removíveis||
+|/mnt|Ponto de montagem de sistema de arquivos temporários||
+|/opt|Pacotes de softwares adiciionados||
+|/proc|Informações de processos do kernel||
+|/root|Pasta do superusuário root|Opcional|
+|/sbin|Bináruos essenciais dos sistema||
+|/srv|Dados providos pelo servidor||
+|/tmp|Arquivos temporários||
+|/usr|Hierarquia secundária||
+|/var|Dados variáveis (logs)||
+
+# Navegação de arvore de diretórios
 
