@@ -16,4 +16,4 @@ Aplicações de Rede em servidores Linux, Debian e Ubuntu
  1. [**Configuração e administração de redes**](Itens/EmConstrução.md)
  
 ### _...Projeto em contrução..._
-![](Itens/Imagens/Construcao.gif)
+![](Itens/Imagens/nanotrabalhando.gif)
