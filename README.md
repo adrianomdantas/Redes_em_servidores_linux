@@ -12,7 +12,7 @@ Aplicações de Rede em servidores Linux, Debian e Ubuntu
       - Navegação na árvire de diretórios
       - Manipulação de arquivos e diretórios
       - Permissões em arquivos e diretórios
-      - Comandos Encadeados e redirocionamento de fluxo 
+      - Comandos Encadeados e redirocionamento de fluxo  
 1. [**Configuração e administração de redes**](Itens/EmConstrução.md)
     - Ferramentas da linha de comando
 	  - Script de inicialização
