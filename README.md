@@ -17,7 +17,7 @@ Aplicações de Rede em servidores Linux, Debian e Ubuntu
     - Ferramentas da linha de comando
 	  - Script de inicialização
 	  - Agendamento de tarefas administrativas
-	  - Outras ferramentas  
+	  - Outras ferramentas
     -Arquivos de configuração de Redes TCP/IP
 	  - Configuração de IPV4 no arquivo de interfaces
 	  - Configuração de IPV6 no arquivo de interfaces
