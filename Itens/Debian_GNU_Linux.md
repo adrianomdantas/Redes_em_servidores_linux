@@ -158,3 +158,142 @@ OBS.: O link simbólico não precisa ter o memso nome do arquivo original
 
 ### Permissões em arquivos e diretórios
 
+Assim como no Unix, o Linux tem basicamente 3 tipos de permissão para os arquivos  
+r ou 4 ( 2<sup>4</sup> ) = leitura | w ou 2 ( 2<sup>1</sup> ) = escrita | x ou 1 ( 2<sup>0</sup> ) = execição  
+
+**Leitura**, permite a visualização porém não a modificação ou execução;  
+**Escrita**, permite a modificação assim como deletar ou mover o arquivo;  
+**Execução**, Permite a execussão do arquivo por script ou programas. 
+
+Existem também 3 níveis de permissão para os arrquivos:    
+Usuário | Grupo | Outros  
+
+Usuário é o proprietário ou ou criador do arquivo que automaticamente pertence a um grupo de mesmo nome, e caso o objeto não se encaixe nestas duas opções, automaticamente é enxergado pelo sistema como outros, mas isso pode ser alterado pelo administrador do sistema  
+Estes níveis podem ser observados quando utilizar o comando **ls -l**  
+```
+[root@localhost home]# ls -l
+total 4
+drwxr-xr-x 2 root root 37 Mar 27 12:36 teste
+
+
+```
+Observe que no começo da linha tem os caracteres `drwxr-xr-x`, devemos enxergar estes caracteres separadamente d|rwx|r-x|r-x: 
+**d**		diretório do sistema (tabela 1.1)  
+**rwx**		permissão de usuário/proprietário (tabela 1.2)   
+**r-x**		permissão do grupo (tabela 1.2)  
+**r-x**		permissão outros (tabela 1.2)  
+**root**	Proprietário  
+**root**	grupo
+   
+tabela 1.1  
+|Caractere|Descrição|
+|:---:|:---|
+|-|Arquivo|
+|l|Link simbólico(atalho)|
+|d|Diretório|
+|b|Arquivo de dispositivo|
+|c|Arquivo de dispositivo|
+|p|Canal FIFO|
+|s|Socket|
+
+tabela 1.2  
+|Valor numérico|Tipo de permissão|
+|:---:|:---:|
+|0|---|
+|1|--x|
+|2|-w-|
+|3|-wx|
+|4|r--|
+|5|r-x|
+|6|rw-|
+|7|rwx|
+
+Para alterar o nível de permissão e a permissão, usamos o comando **chmod**:  
+```
+chmod [permissão por nível] [arquivo]
+```
+Exemplo:
+```
+[root@localhost home]# ls -l
+total 4
+drwxr-xr-x 2 root root 37 Mar 27 12:36 teste
+[root@localhost home]# chmod 774 arquivo.txt
+[root@localhost home]# ls -l
+total 4
+drwxrwxr-- 2 root root 37 Mar 27 12:36 arquivo.txt
+```
+
+Outra forma de utilozar o comando **chmod** é com letras ao invés de usar com numeros:
+```
+[root@localhost home]# ls -l
+total 4
+drw-rwxr-- 2 root root 37 Mar 27 12:36 arquivo.txt
+[root@localhost home]# chmod u=rw,g=w,o= arquivo.txt
+[root@localhost home]# ls -l
+total 4
+drw--w---- 2 root root 37 Mar 27 12:36 arquivo.txt
+```
+Ou no caso de querer dar uma permissão plena a um arquivo qualquer
+```
+[root@localhost home]# ls -l
+total 4
+drw--w---- 2 root root 37 Mar 27 12:36 arquivo.txt
+[root@localhost home]# chmod +x arquivo.txt
+[root@localhost home]# ls -l
+total 4
+drwx-wx--x 2 root root 37 Mar 27 12:36 arquivo.txt
+```
+Observe que todos os niveis ficaram com permissão de execussão.  
+No caso de diretório, a forma de usar o **chmod** é o mesmo porém o significado das letras **rwx** muda.  
+A permissão de leitura, permite que você consiga ver o arquivo dentro do diretório usando o comando **ls** mas não permite acessar o arquivo, a mesma coisa com a permissão de executar, 
+A permissão de escrita permite que seja movido ou excluido  arquivo.  
+
+Também é possivel maniputar o usuário e o grupo atravém do comando **chown**, vamos supor que o arquivo.txt que pertence ao usuário root e grupo root, (root:root) vai passar a pertencer ao usuáio sysadmin e grupo admin
+```
+[root@localhost teste]# ls -l
+total 0
+-rw-r--r-- 1 root root 0 Mar 27 13:51 arquivo.txt
+[root@localhost teste]# chown sysadmin:admin arquivo.txt
+[root@localhost teste]# ls -l
+total 0
+-rw-r--r-- 1 sysadmin admin 0 Mar 27 13:51 arquivo.txt
+```
+Não é possivel que qualquer um possa alterar este arquivo, apenas o usuário proprietário ou o super usuário root.  
+
+### Comando encadeados e redirecionamento de fluxo
+
+O Shell nos permite encadear comandos, seja ele sequencial ou condicional além de ser possível direcionar a saida do comando para outros comando ous para outros arquivos (normamente de texto).  
+Para isso temos algumas opções de operadores lógicos, um deles usado para separa comandos sequenciais é o **";"**.  
+```
+<comando 1>;<comando 2>;<comando 3>
+```
+exemplo:
+```
+[root@localhost teste]# clear ; ifconfig
+```
+O comando acima vai limpar a tela e na sequencia vai mostrar a saida do comando **ifconfig**  
+
+O encadeamento condicional podemos escolher se executa um segundo comando se o primeiro comando for executado com sucesso ou sem sucesso  
+Na primeira opção, podemos usar  operador lógico **|| (OU)** 
+```
+[root@localhost home]# rm teste/ || echo "não foi possivel excluir o diretório"
+rm: cannot remove 'teste/': Is a directory
+não foi possivel excluir o diretório
+```
+Para seguntda opç~eo, executar o segundo comando só se o primeiro for executado com sucesso, usamos o operador lógico **&& (E)**
+```
+[root@localhost home]# rm -r teste/ && echo "diretório excluido"
+diretório excluido
+[root@localhost home]# ls
+[root@localhost home]#  
+```
+
+Podemos usar a saida de um comando na entrada de um outro comando usando o caractere **| (pipe)** e ainda redirecionar esta saida par aum arquivo .txt por exemplo
+```
+[root@localhost home]# ps aux | grep ssh > arquivo.txt
+[root@localhost home]# cat arquivo.txt
+root       224  0.0  0.8   5036  1568 hvc0     S+   16:11   0:00 grep --color=auto ssh
+[root@localhost home]#  
+ ```
+No cado como foi usado o caractere **">"** a saida sobrescreverá o conteúdo original arquivo **.txt**, se for utilizado o caractere **">>"** a saída sera anexada ao conteúdo já existente no arquivo.  
+Caso seja direcionado a saída a um arquivo inexistente, o sistema cria o arquivo automaticamente.
