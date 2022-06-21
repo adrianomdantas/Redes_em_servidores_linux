@@ -177,4 +177,8 @@ Adriano
 [root@Adriano ~]# 
 ```
 
-As configurações feitas diretamente por linha de comando são volateis e ao reiniciar o servidor, serão perdidas, porém dá para deixar estas configurações volateis automáticas, por exemplo, por intermédio dos serviços **rc-local-service** e **cronservice**.
+As configurações feitas diretamente por linha de comando são volateis e ao reiniciar o servidor, serão perdidas, porém dá para deixar estas configurações volateis automáticas, por exemplo, por intermédio dos serviços **rc-local.service** e **cron.service**.
+
+
+### Script de inicialização
+
